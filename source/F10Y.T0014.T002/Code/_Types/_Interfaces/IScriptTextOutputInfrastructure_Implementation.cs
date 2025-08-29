@@ -12,10 +12,10 @@ namespace F10Y.T0014.T002
     public interface IScriptTextOutputInfrastructure_Implementation :
         T001.IScriptTextOutputInfrastructure_Definition
     {
-        string T001.IScriptTextOutputInfrastructure_Definition.Output_TextFilePath =>
+        string T001.N001.IScriptTextOutputInfrastructure_Definition.Output_TextFilePath =>
             Instances.FilePaths.Output_TextFilePath;
 
-        void T001.IScriptTextOutputInfrastructure_Definition.Open(params string[] filePaths)
+        void T001.N001.IScriptTextOutputInfrastructure_Definition.Open(params string[] filePaths)
             => Instances.NotepadPlusPlusOperator.Open(filePaths);
     }
 }
