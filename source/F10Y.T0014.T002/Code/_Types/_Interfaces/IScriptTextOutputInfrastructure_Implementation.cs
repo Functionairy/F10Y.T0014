@@ -15,7 +15,10 @@ namespace F10Y.T0014.T002
         string T001.N001.IScriptTextOutputInfrastructure_Definition.Output_TextFilePath =>
             Instances.FilePaths.Output_TextFilePath;
 
-        void T001.N001.IScriptTextOutputInfrastructure_Definition.Open(params string[] filePaths)
+        void T001.N001.IScriptTextOutputInfrastructure_Definition.Open_FilePaths(params string[] filePaths)
             => Instances.NotepadPlusPlusOperator.Open(filePaths);
+
+        void T001.N001.IScriptTextOutputInfrastructure_Definition.Open_DirectoryPaths(params string[] directoryPaths)
+            => Instances.WindowsExplorerOperator.Open_Directories_InExplorer(directoryPaths);
     }
 }

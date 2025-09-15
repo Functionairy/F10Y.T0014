@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="Main">
     <TargetFramework>netstandard2.1</TargetFramework>
     <NoWarn>CS1573;CS1587;CS1591;IDE0130</NoWarn>
@@ -16,5 +16,6 @@
     <ProjectReference Include="..\..\..\F10Y.L0019\source\F10Y.L0019\F10Y.L0019.csproj" />
     <ProjectReference Include="..\..\..\F10Y.L0004\source\F10Y.L0004.L000\F10Y.L0004.L000.csproj" />
     <ProjectReference Include="..\F10Y.T0014.T001\F10Y.T0014.T001.csproj" />
+    <ProjectReference Include="..\..\..\F10Y.L0032\source\F10Y.L0032\F10Y.L0032.csproj" />
   </ItemGroup>
 </Project>

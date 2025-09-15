@@ -24,20 +24,47 @@ namespace F10Y.T0014.T001.N001
         /// <remarks>
         /// This would typically be a text editor like notepad, Notepad++, or VS Code.
         /// </remarks>
-        protected void Open(params string[] filePaths);
+        protected void Open_FilePaths(params string[] filePaths);
+
+        protected void Open_FilePath(string filepath)
+            => this.Open_FilePaths(filepath);
+
+        protected void Open(string filePath)
+            => this.Open_FilePath(filePath);
+
+        /// <summary>
+        /// Provides the ability open directories for display.
+        /// </summary>
+        /// <remarks>
+        /// This would typically be a file explorer, like Windows Explorer.
+        /// </remarks>
+        protected void Open_DirectoryPaths(params string[] directoryPaths);
+
+        protected void Open_DirectoryPath(string directoryPath)
+            => this.Open_DirectoryPaths(directoryPath);
 
         /// <summary>
         /// Opens the <see cref="Output_TextFilePath"/>.
         /// </summary>
         protected void Open_OutputTextFile()
-            => this.Open(
+            => this.Open_FilePaths(
                 this.Output_TextFilePath);
+
+        protected Task Write_Lines(
+            string filePath,
+            IEnumerable<string> lines)
+            => Instances.FileOperator.Write_Lines(
+                filePath,
+                lines);
+
+        protected Task Write_Lines(IEnumerable<string> lines)
+            => this.Write_Lines(
+                this.Output_TextFilePath,
+                lines);
 
         protected async Task Write_Lines_AndOpen(IEnumerable<string> lines)
         {
-            await Instances.FileOperator.Write_Lines(
-                this.Output_TextFilePath,
-                lines);
+            await this.Write_Lines(lines);
 
             this.Open_OutputTextFile();
         }
@@ -50,7 +77,7 @@ namespace F10Y.T0014.T001.N001
                 filePath,
                 lines);
 
-            this.Open(filePath);
+            this.Open_FilePaths(filePath);
         }
     }
 }
