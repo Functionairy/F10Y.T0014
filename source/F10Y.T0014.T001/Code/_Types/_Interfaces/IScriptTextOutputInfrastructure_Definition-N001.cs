@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using F10Y.T0004;
@@ -57,6 +58,11 @@ namespace F10Y.T0014.T001.N001
                 filePath,
                 lines);
 
+        protected Task Write_Lines(
+            params string[] lines)
+            => this.Write_Lines(
+                lines.AsEnumerable());
+
         protected Task Write_Lines(IEnumerable<string> lines)
             => this.Write_Lines(
                 this.Output_TextFilePath,
@@ -68,6 +74,9 @@ namespace F10Y.T0014.T001.N001
 
             this.Open_OutputTextFile();
         }
+
+        protected Task Write_Lines_AndOpen(params string[] lines)
+            => this.Write_Lines_AndOpen(lines.AsEnumerable());
 
         protected async Task Write_Lines_AndOpen(
             string filePath,
