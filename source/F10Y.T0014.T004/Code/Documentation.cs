@@ -1,0 +1,12 @@
+using System;
+
+
+namespace F10Y.T0014.T004
+{
+	/// <summary>
+	/// Cross-platform (Windows and MacOS) script infrastructure implementation types library.
+	/// </summary>
+	public static class Documentation
+	{
+	}
+}
