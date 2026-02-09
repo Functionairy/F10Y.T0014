@@ -33,6 +33,9 @@ namespace F10Y.T0014.T001.N001
         protected void Open(string filePath)
             => this.Open_FilePath(filePath);
 
+        protected void Open(params string[] filePaths)
+            => this.Open_FilePaths(filePaths);
+
         /// <summary>
         /// Provides the ability open directories for display.
         /// </summary>

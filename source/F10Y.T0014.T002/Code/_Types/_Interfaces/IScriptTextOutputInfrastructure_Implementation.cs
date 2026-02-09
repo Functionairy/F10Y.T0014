@@ -12,6 +12,7 @@ namespace F10Y.T0014.T002
     public interface IScriptTextOutputInfrastructure_Implementation :
         T001.IScriptTextOutputInfrastructure_Definition
     {
+        /// <inheritdoc cref="L0004.L000.IFilePaths.Output_TextFilePath"/>
         string T001.N001.IScriptTextOutputInfrastructure_Definition.Output_TextFilePath =>
             Instances.FilePaths.Output_TextFilePath;
 
