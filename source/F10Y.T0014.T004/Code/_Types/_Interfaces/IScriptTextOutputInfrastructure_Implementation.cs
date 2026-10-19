@@ -5,6 +5,9 @@ using F10Y.T0004;
 
 namespace F10Y.T0014.T004
 {
+    /// <summary>
+    /// See also: F10Y.L0005.L0005.IScriptTextOutputInfrastructure_Implementation (it uses Nextpad++ for files instead of Visual Studio Code).
+    /// </summary>
     [UtilityTypeMarker]
     public interface IScriptTextOutputInfrastructure_Implementation :
         T001.IScriptTextOutputInfrastructure_Definition
